@@ -1,5 +1,9 @@
+# n => 양꼬치 n인분
+# k => 음료수 k개
+
+
 def solution(n, k):
-    k = k - int((n//10))
+    k = k - (n//10)
     answer = n * 12000 + k * 2000
     return answer
 
