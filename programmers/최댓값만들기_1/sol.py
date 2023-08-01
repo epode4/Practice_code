@@ -7,7 +7,7 @@ def solution(numbers):
     
 #     for i in range(len(numbers)):
 #         for j in range(i+1, len(numbers)):
-#             # print(i, j)
+#             print(i, j)
 #             result = numbers[i] * numbers[j]
             
 #             if answer < result:
