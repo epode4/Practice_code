@@ -51,3 +51,25 @@ for row in matrix:
     for item in row:
         if item == 5:
             print('5가 있습니다')
+
+
+n, m = map(int,input().split())
+matrix = []
+
+for i in range(n):
+    numbers = list(map(int,input().split()))
+    matrix.append(numbers)
+
+# n, m 을 아는 경우 
+    # for row in range(n):
+    #     for col in range(m)
+
+# row(가로줄) 우선 탐색 출력
+for row in range(len(matrix)):
+    for col in range(len(matrix[0])):
+        print(matrix[row][col])
+
+# column(세로) 우선 탐색 출력
+for col in range(len(matrix[0])):
+    for row in range(len(matrix)):
+        print(matrix[row][col])
