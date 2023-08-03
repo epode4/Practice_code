@@ -22,9 +22,8 @@ for tc in range(1, t+1):
                 else:
                     color2.append((i,j))
 
-    # print(color1)
-    # print(color2)
-
+    print(color1)
+    print(color2)
         
     for num in color1:
         if num in color2:
