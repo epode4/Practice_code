@@ -13,32 +13,30 @@ for tc in range(1,t+1):
 
     l = 1
     r = p 
-    now = 0
+    c = int((l+r)/2)
 
-    while now != a:
-        c = int((l+r)/2)
+    while c != a:
         if a > c:
             l = c
         else:
             r = c
-        now = c
 
+        c = int((l+r)/2)
         # print(l,r,c)
         count_a += 1
         
 
     l = 1
     r = p 
-    now = 0
+    c = int((l+r)/2)
 
-    while now != b:
-        c = int((l+r)/2)
+    while c != b:
         if b > c:
             l = c
         else:
             r = c
-        now = c
-
+                
+        c = int((l+r)/2)
         # print(l,r,c)
         count_b += 1
 
