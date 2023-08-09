@@ -21,7 +21,7 @@ for tc in range(1, T+1):
     for line in range(e):
         start, end = list(map(int, input().split()))
         nodes[start][end] = 1
-    # pprint(nodes)
+    pprint(nodes)
 
     # s : 출발 노드 / g : 도착 노드
     s, g = list(map(int,input().split()))
