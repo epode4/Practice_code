@@ -19,40 +19,38 @@ for tc in range(1, T+1):
         for j in range(n):
             if maze[i][j] == 2:
                 start = (i,j)
-                maze[i][j] = -1
 
-    # queue = []
-    # queue.append(start)
-    queue = [start]
+    # print(start)
 
-    dx = [0,0,-1,1]
+    queue = []
+    queue.append(start)
+    
+    now = start
+    sum_way = 0
+
+    dx = [0,0,1,-1]
     dy = [-1,1,0,0]
 
-    result = 0
-
-    while len(queue):
-
+    while queue:
         now = queue.pop(0)
-        x, y = now[0], now[1]
-        # maze[x][y] = 1
+        x,y = now[0], now[1]
 
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
 
-            if 0<= nx < n and 0<= ny <n:
+            if 0<= nx < n and 0 <= ny < n:
                 if maze[nx][ny] == 0:
-                    queue.append((nx,ny))                    
-                    maze[nx][ny] = maze[x][y]-1
-                elif maze[nx][ny] == 3:
-                    result = abs(maze[x][y]) -1
-                    break
-    # pprint(maze)
-    # if meet == 1:
-    #     result = (maze[x][y])
-    #     print(f'#{tc} {(result-2)*-1}')
-    # else:
-    #     print(f'#{tc} {0}')
-    print(f'#{tc} {result}')
+                    way = (nx, ny)
+                    queue.append(way)
+                    maze[nx][ny] = maze[x][y] -1
 
-    
+                elif maze[nx][ny] == 3:
+                    sum_way = abs(maze[x][y] -2)                    
+                    break
+
+
+
+    # pprint(maze)
+    print(f'#{tc} {sum_way}')
+            
