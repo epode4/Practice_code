@@ -11,6 +11,7 @@ def solution(letter):
     letter = list(letter.split())
     print(letter)
     
+    
     for i in letter:
         a = morse[i]
         answer += (a)
