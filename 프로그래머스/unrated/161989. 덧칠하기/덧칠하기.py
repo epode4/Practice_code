@@ -1,6 +1,6 @@
 def solution(n, m, section):
     answer = 0
-    while len(section) > 1:
+    while len(section) > 0:
         start = section.pop(0)
         paint = start + m
         answer += 1
@@ -15,6 +15,6 @@ def solution(n, m, section):
         for y in delect:
             section.remove(y)
             
-    if len(section):
-        answer += 1
+    # if len(section):
+    #     answer += 1
     return answer
