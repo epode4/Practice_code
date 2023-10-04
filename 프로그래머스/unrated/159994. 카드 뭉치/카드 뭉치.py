@@ -17,7 +17,7 @@ def solution(cards1, cards2, goal):
         
     
     for j in card_m:
-        if j < 0 or j > 1:
+        if j != 1:
             answer = 'No'
 
         
