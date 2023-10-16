@@ -4,7 +4,7 @@ def solution(s):
     count_s = 0
     count_d = 0
     for i in range(len(s)-1):
-        print('x =',x, 'i =',s[i])
+        # print('x =',x, 'i =',s[i])
         if s[i] == x:
             count_s += 1
         else: 
